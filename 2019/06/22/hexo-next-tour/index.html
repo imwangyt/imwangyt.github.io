@@ -94,17 +94,18 @@
 
 
 
-  <meta name="description" content="往事随风description">
-<meta name="keywords" content="往事随风keywords">
-<meta property="og:type" content="website">
-<meta property="og:title" content="往事随风">
-<meta property="og:url" content="https://imwangyt.github.io/index.html">
+  <meta name="description" content="摘要：Hexo + NexT的简要笔记">
+<meta name="keywords" content="Hexo,NexT">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo + NexT入门">
+<meta property="og:url" content="https://imwangyt.github.io/2019/06/22/hexo-next-tour/index.html">
 <meta property="og:site_name" content="往事随风">
-<meta property="og:description" content="往事随风description">
+<meta property="og:description" content="摘要：Hexo + NexT的简要笔记">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-06-22T06:47:44.036Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="往事随风">
-<meta name="twitter:description" content="往事随风description">
+<meta name="twitter:title" content="Hexo + NexT入门">
+<meta name="twitter:description" content="摘要：Hexo + NexT的简要笔记">
 
 
 
@@ -112,7 +113,7 @@
 
   
   
-  <link rel="canonical" href="https://imwangyt.github.io/">
+  <link rel="canonical" href="https://imwangyt.github.io/2019/06/22/hexo-next-tour/">
 
 
 
@@ -122,7 +123,7 @@
   };
 </script>
 
-  <title>往事随风</title>
+  <title>Hexo + NexT入门 | 往事随风</title>
   
 
 
@@ -170,8 +171,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -213,7 +213,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
 
     
     
@@ -326,9 +326,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -360,10 +360,8 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/06/22/hexo-next-tour/" class="post-title-link" itemprop="url">Hexo + NexT入门</a>
+          <h1 class="post-title" itemprop="name headline">Hexo + NexT入门
+
               
             
           </h1>
@@ -444,18 +442,75 @@
       
 
       
-        
-          <p>摘要：Hexo + NexT的简要笔记</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/06/22/hexo-next-tour/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
+        <p>摘要：Hexo + NexT的简要笔记</p>
+<a id="more"></a>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ol>
+<li><a href="https://hexo.io/zh-cn/docs" target="_blank" rel="noopener">hexo docs</a></li>
+<li><a href="https://theme-next.org/docs/getting-started/" target="_blank" rel="noopener">theme-next docs</a></li>
+</ol>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><h4 id="环境Git-Node-js"><a href="#环境Git-Node-js" class="headerlink" title="环境Git+Node.js"></a>环境Git+Node.js</h4><ol>
+<li>Git直接安装即可</li>
+<li>Node可以使用nvm安装<blockquote>
+<p>nvm请使用node和npm的淘宝镜像<br>也可以直接下载node relaease，解压到nvm根目录即可，尤其是碰到<code>nvm install NODE_VERSION</code>没有成功安装npm的情况。</p>
+</blockquote>
+</li>
+</ol>
+<h4 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a>Hexo安装</h4> <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<h4 id="NexT安装"><a href="#NexT安装" class="headerlink" title="NexT安装"></a>NexT安装</h4><ol>
+<li><p>使用<code>hexo init</code>创建博客项目</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">BLOG_PROJECT_ROOT&gt;</span> hexo init # 将当前目录初始化为博客项目</span><br><span class="line"><span class="meta">BLOG_PROJECT_ROOT_PAREANT&gt;</span> hexo init BLOG_PROJECT_ROOT # 在当前目录新建BLOG_PROJECT_ROOT目录并初始化为博客项目</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>博客项目本身也是一个<code>Node.js</code>项目</p>
+</blockquote>
+</li>
+<li><p>进入博客项目目录<code>BLOG_PROJECT_ROOT</code>，下载NexT主题</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">BLOG_PROJECT_ROOT&gt;</span> git clone https://github.com/theme-next/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>也可以直接复制已经下载过的内容<br>NexT theme也是一个<code>Node.js</code>项目</p>
+</blockquote>
+</li>
+<li><p>启用NexT，并选择布局</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># BLOG_PROJECT_ROOT/_config.yml</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">next</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># BLOG_PROJECT_ROOT/_config.yml</span></span><br><span class="line"><span class="comment">#scheme: Muse </span></span><br><span class="line"><span class="attr">scheme:</span> <span class="string">Mist</span>    <span class="comment">#顶部菜单 + 右侧隐藏目录/个人信息</span></span><br><span class="line"><span class="comment">#scheme: Pisces #右侧菜单</span></span><br><span class="line"><span class="comment">#scheme: Gemini #左侧菜单</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Hexo在博客项目根目录有<code>_config.yml</code>，一般称为<code>site config yml</code><br>NexT在主题根目录也<code>_config.yml</code>，一般称为<code>theme config yml</code><br>Hexo的插件应该都有自己的<code>_config.yml</code></p>
+</blockquote>
+</li>
+</ol>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><h4 id="站点-amp-网址"><a href="#站点-amp-网址" class="headerlink" title="站点&amp;网址"></a>站点&amp;网址</h4><ul>
+<li><a href="https://hexo.io/zh-cn/docs/configuration#%E7%BD%91%E7%AB%99" target="_blank" rel="noopener">Hexo-配置-网站</a></li>
+<li><a href="https://hexo.io/zh-cn/docs/configuration#%E7%BD%91%E5%9D%80" target="_blank" rel="noopener">Hexo-配置-网址</a></li>
+<li><a href="https://hexo.io/zh-cn/docs/configuration#%E5%88%86%E9%A1%B5" target="_blank" rel="noopener">Hexo-配置-分页</a></li>
+<li>有意思/重要的配置：<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 指定文章/页面生成静态html文件的路径和/或文件名规则</span></span><br><span class="line"><span class="comment"># 可使用变量参见：https://hexo.io/zh-cn/docs/permalinks</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">:year/:month/:day/:title/</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="页面-amp-菜单"><a href="#页面-amp-菜单" class="headerlink" title="页面&amp;菜单"></a>页面&amp;菜单</h4><ul>
+<li><p>页面 vs. 文章<br>页面一般指站点的<code>固定</code>页面，配合菜单，通常组成整个站点的<code>框架/房间</code>，比如首页、归档、标签云、分类清单、关于我等<br>文章一般指您写作<code>动态</code>页面，即日常编辑的博客文章，</p>
+<p>页面一般有特定的内置名称和布局，generate时，会动态根据文章的数据生成。比如归档、分类、标签<br>Hexo默认只提供首页和归档页面，参考<a href="https://theme-next.org/docs/theme-settings/custom-pages#Adding-%C2%ABTags%C2%BB-Page" target="_blank" rel="noopener">自定义页面-标签</a>和<a href="https://theme-next.org/docs/theme-settings/custom-pages#Adding-%C2%ABCategories%C2%BB-Page" target="_blank" rel="noopener">自定义页面-分类</a></p>
+</li>
+<li><p>页面&amp;菜单<br>菜单通常由主题theme确定，如<a href="https://theme-next.org/docs/getting-started/#Configuring-Menu-Items" target="_blank" rel="noopener">NexT-菜单</a></p>
+</li>
+</ul>
+<h4 id="文章"><a href="#文章" class="headerlink" title="文章"></a>文章</h4><blockquote>
+<p>这里不包括文章<code>页面</code>的样式、控件等模板配置，一般由主题决定</p>
+</blockquote>
+<ul>
+<li><a href="https://hexo.io/zh-cn/docs/configuration#%E6%96%87%E7%AB%A0" target="_blank" rel="noopener">Hexo-配置-文章</a></li>
+<li>有意思/重要的配置：<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># hexo new新建文章的md文件名，可以使用变量</span></span><br><span class="line"><span class="attr">new_post_name:</span> <span class="string">:year-:month-:day-:title.md</span></span><br><span class="line"><span class="comment"># 文章内容中超链接的生成规则</span></span><br><span class="line"><span class="attr">relative_link:</span> <span class="literal">false</span>  <span class="comment"># 默认情况下，Hexo生成的超链接都是绝对地址</span></span><br><span class="line"><span class="attr">external_link:</span> <span class="literal">true</span>   <span class="comment"># 在新标签中打开链接，即生成的a标签的target属性</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h4><ul>
+<li><a href="https://theme-next.org/docs/theme-settings/custom-pages#Adding-%C2%ABCategories%C2%BB-Page" target="_blank" rel="noopener">Hexo-部署-git</a><blockquote>
+<p>注意repo的配置url，既可以使用git协议（SSH，需要SSH密钥配置），也可以使用HTTPS协议（每次都需要用户名密码）</p>
+</blockquote>
+</li>
+</ul>
+
       
     </div>
 
@@ -476,14 +531,25 @@
 
     <footer class="post-footer">
       
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+          
+            <a href="/tags/NexT/" rel="tag"># NexT</a>
+          
+        </div>
+      
+
+      
+      
+      
 
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -493,14 +559,15 @@
   </article>
 
 
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -520,8 +587,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -629,6 +705,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#参考"><span class="nav-number">1.</span> <span class="nav-text">参考</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#环境Git-Node-js"><span class="nav-number">2.1.</span> <span class="nav-text">环境Git+Node.js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Hexo安装"><span class="nav-number">2.2.</span> <span class="nav-text">Hexo安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#NexT安装"><span class="nav-number">2.3.</span> <span class="nav-text">NexT安装</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置"><span class="nav-number">3.</span> <span class="nav-text">配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#站点-amp-网址"><span class="nav-number">3.1.</span> <span class="nav-text">站点&amp;网址</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#页面-amp-菜单"><span class="nav-number">3.2.</span> <span class="nav-text">页面&amp;菜单</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文章"><span class="nav-number">3.3.</span> <span class="nav-text">文章</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#部署"><span class="nav-number">3.4.</span> <span class="nav-text">部署</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -758,6 +851,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.2"></script>
+<script src="/js/post-details.js?v=7.1.2"></script>
+
+
 
   
 
@@ -773,6 +870,8 @@
 
   
 
+
+  
 
 
   
